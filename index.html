@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fair Price | Alimentos Baratos Para Você!</title>
+    <link rel="icon" href="https://i.ibb.co/8VB86p7/nunseidirijiloucalavadaatualizada1938.webp" type="image/webp">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #770dc8ff;
+            background-color: #6a0dad;
             color: #333;
         }
 
         header {
-            background-color: #ff4500;
+            background: linear-gradient(to right, #ff4500, #ff8c00);
             color: white;
             padding: 20px;
             text-align: center;
@@ -50,6 +51,25 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .offer::after {
+            content: "OFERTA!";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff0000;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
         }
 
         .product-card img {
@@ -94,6 +114,17 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 600px) {
+            .product-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .product-card img {
+                width: 80%;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -104,7 +135,7 @@
 
     <header>
         <div class="logo">Fair Price</div>
-        <p>Os melhores preços dos alimentos estão aqui!</p>
+        <p>Comparador de preços dos itens essenciais da cesta básica</p>
     </header>
 
     <div class="container">
@@ -150,26 +181,21 @@
             </div>
         </div>
         
-         <div class="product-card">
-           <img src="https://i.ibb.co/vxd2RFgm/234985-1200-675.webp">
-           <div>
-             <h2>Molho De Tomate 300g</h2>
-             <p>
-               Molho De Tomate Olé Tradicional Sachê 300g, Compre ja!
-             </p>
-             <div class="price">
-               R$ 1,45</div>
-               <a href="https://delivery.atacadotreichel.com.br/123198-molho-de-tomate-ole-tradicional-sache-300g/p"
-               target="_blank">Comprar Agora</a>
-           </div>
+        <div class="product-card">
+            <img src="https://i.ibb.co/vxd2RFgm/234985-1200-675.webp" alt="Molho de Tomate">
+            <div>
+                <h2>Molho De Tomate 300g</h2>
+                <p>Molho De Tomate Olé Tradicional Sachê 300g, Compre já!</p>
+                <div class="price">R$ 1,45</div>
+                <a href="https://delivery.atacadotreichel.com.br/123198-molho-de-tomate-ole-tradicional-sache-300g/p" target="_blank">Comprar Agora</a>
+            </div>
         </div>   
-        
-
     </div>
 
     <footer>
         <p>© 2025 Fair Price. Todos os direitos reservados.</p>
-        <p><a href="#">Sobre nós</a> | <a href="#">Contato</a></p>
+        <p>Última atualização: 25/06/2025</p>
+        <p><a href="#">Voltar ao Topo</a> | <a href="#">Sobre nós</a> | <a href="#">Contato</a></p>
     </footer>
 
 </body>
