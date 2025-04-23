@@ -125,6 +125,7 @@
                 height: auto;
             }
         }
+        
     </style>
 </head>
 <body>
@@ -138,58 +139,173 @@
         <p>Comparador de preços dos itens essenciais da cesta básica</p>
     </header>
 
+    
+    <nav style="text-align: center; margin-top: 20px;">
+        <button onclick="mostrarCategoria('Tio Leo-Campinho')" style="
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(to right, #ff4500, #ff8c00);
+            color: white;
+            font-weight: bold;
+            margin: 5px;
+            cursor: pointer;
+            ">
+        
+        <img src="https://play-lh.googleusercontent.com/5pdoEZIei6GIHqDR7AW357CXWN3-H43mgal_uKD6MWPluwj67tLXung04eCq3_SU5g" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+        Tio Leo-Campinho
+
+        </button>
+        <button onclick="mostrarCategoria('feijao')" style="
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(to right, #ff4500, #ff8c00);
+            color: white;
+            font-weight: bold;
+            margin: 5px;
+            cursor: pointer;
+            ">
+            🥣 Feijão
+        </button>
+        <button onclick="mostrarCategoria('limpeza')" style="
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(to right, #ff4500, #ff8c00);
+        color: white;
+        font-weight: bold;
+        margin: 5px; 
+        cursor: pointer;  
+        ">
+            🧼 Limpeza
+        </button>
+        <button onclick="mostrarCategoria('achocolatado')" style="
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(to right, #ff4500, #ff8c00);
+        color: white;
+        font-weight: bold;
+        margin: 5px;
+        cursor: pointer;
+        ">
+            🍫 Achocolatado
+        </button>
+        <button onclick="mostrarCategoria('molho')" style="
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(to right, #ff4500, #ff8c00);
+        color: white;
+        font-weight: bold;
+        margin: 5px;
+        cursor: pointer;
+        ">
+            🍅 Molho
+        </button>
+        <button onclick="mostrarCategoria('todos')" style="
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(to right, #ff4500, #ff8c00);
+        color: white;
+        font-weight: bold;
+        margin: 5px;
+        cursor: pointer;
+        ">
+
+            👀 Mostrar Todos
+        </button>
+    </nav>
+
     <div class="container">
         <h1>Itens da Cesta Básica</h1>
 
-        <div class="product-card">
-            <img src="https://i.ibb.co/LDp1T78L/arroz-tio-lino-t-1-5kg-304e3758-1c5e-47dd-82d4-0f4dc735f5ea.jpg" alt="Arroz Tio Lino">
-            <div>
-                <h2>Arroz Tio Lino</h2>
-                <p>Por um preço muito bom</p>
-                <div class="price">R$ 6,79</div>
-                <a href="#">Comprar Agora</a>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="https://i.ibb.co/b5vC05F6/Tio-Chico-feij-o-corda-sem-fundo.png" alt="Feijão Tio Chico">
-            <div>
-                <h2>Feijão Tio Chico</h2>
-                <p>Feijão por um ótimo preço aqui no Frossard</p>
-                <div class="price">R$ 5,70</div>
-                <a href="#">Comprar Agora</a>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="https://i.ibb.co/S4CTpkZh/dc9f7bec2bfada7d736a7ba8cac94a09-1.jpg" alt="Detergente Aqua">
-            <div>
-                <h2>Detergente Aqua</h2>
-                <p>Remove gorduras e sujeiras com alto poder de limpeza</p>
-                <div class="price">R$ 4,99</div>
-                <a href="#">Comprar Agora</a>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="https://i.ibb.co/x8r2fs02/267070-1.jpg" alt="Achocolatado Toddy">
-            <div>
-                <h2>Achocolatado Toddy 370g</h2>
-                <p>Fonte de vitaminas e sabor inconfundível</p>
-                <div class="price">R$ 20,00</div>
-                <a href="https://www.amazon.com.br/Achocolatado-Original-Toddy-Pote-370G/dp/B0C6FJHQ6G" target="_blank">Comprar Agora</a>
-            </div>
-        </div>
         
-        <div class="product-card">
-            <img src="https://i.ibb.co/vxd2RFgm/234985-1200-675.webp" alt="Molho de Tomate">
-            <div>
-                <h2>Molho De Tomate 300g</h2>
-                <p>Molho De Tomate Olé Tradicional Sachê 300g, Compre já!</p>
-                <div class="price">R$ 1,45</div>
-                <a href="https://delivery.atacadotreichel.com.br/123198-molho-de-tomate-ole-tradicional-sache-300g/p" target="_blank">Comprar Agora</a>
+        <div id="Tio Leo-Campinho" class="categoria">
+            <div class="product-card">
+                <img src="https://i.ibb.co/LDp1T78L/arroz-tio-lino-t-1-5kg-304e3758-1c5e-47dd-82d4-0f4dc735f5ea.jpg" alt="Arroz Tio Lino">
+                <div>
+                   
+                    <h2>Arroz Tio Lino</h2>
+                    <p>Por um preço muito bom</p>
+                    <div class="price">R$ 6,79</div>
+                    <a href="#">Comprar Agora</a>
+                    
+                </div>
             </div>
-        </div>   
+            <div class="product-card">
+                <img src="https://phygital-files.mercafacil.com/copagril/uploads/produto/macarrao_galo_semola_500g_tortiglione_semola_606eddc0-86a9-4a74-8ee2-a98f79e61797.png" alt="Macarrão Galo">
+                <div>
+                    <h2>Macarrão Galo</h2>
+                    <p>Melhor preço do tio leo</p>
+                    <div class="price">R$ 3,99</div>
+                    <a href="#">Comprar Agora</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1008.jpg" alt="Açúcar União">
+                <div>
+                    <h2>Açúcar União-1kg</h2>
+                    <p>O melhor preço do tio leo</p>
+                    <div class="price">R$ 4,99</div>
+                    <a href="#">Comprar Agora</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="feijao" class="categoria" style="display: none;">
+            <div class="product-card">
+                <img src="https://i.ibb.co/b5vC05F6/Tio-Chico-feij-o-corda-sem-fundo.png" alt="Feijão Tio Chico">
+                <div>
+                    <h2>Feijão Tio Chico</h2>
+                    <p>Feijão por um ótimo preço aqui no Frossard</p>
+                    <div class="price">R$ 5,70</div>
+                    <a href="#">Comprar Agora</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="limpeza" class="categoria" style="display: none;">
+            <div class="product-card">
+                <img src="https://i.ibb.co/S4CTpkZh/dc9f7bec2bfada7d736a7ba8cac94a09-1.jpg" alt="Detergente Aqua">
+                <div>
+                    <h2>Detergente Aqua</h2>
+                    <p>Remove gorduras e sujeiras com alto poder de limpeza</p>
+                    <div class="price">R$ 4,99</div>
+                    <a href="#">Comprar Agora</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="achocolatado" class="categoria" style="display: none;">
+            <div class="product-card">
+                <img src="https://i.ibb.co/x8r2fs02/267070-1.jpg" alt="Achocolatado Toddy">
+                <div>
+                    <h2>Achocolatado Toddy 370g</h2>
+                    <p>Fonte de vitaminas e sabor inconfundível</p>
+                    <div class="price">R$ 20,00</div>
+                    <a href="https://www.amazon.com.br/Achocolatado-Original-Toddy-Pote-370G/dp/B0C6FJHQ6G" target="_blank">Comprar Agora</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="molho" class="categoria" style="display: none;">
+            <div class="product-card">
+                <img src="https://i.ibb.co/vxd2RFgm/234985-1200-675.webp" alt="Molho de Tomate">
+                <div>
+                    <h2>Molho De Tomate 300g</h2>
+                    <p>Molho De Tomate Olé Tradicional Sachê 300g, Compre já!</p>
+                    <div class="price">R$ 1,45</div>
+                    <a href="https://delivery.atacadotreichel.com.br/123198-molho-de-tomate-ole-tradicional-sache-300g/p" target="_blank">Comprar Agora</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
@@ -197,6 +313,20 @@
         <p>Última atualização: 25/06/2025</p>
         <p><a href="#">Voltar ao Topo</a> | <a href="#">Sobre nós</a> | <a href="#">Contato</a></p>
     </footer>
+
+    
+    <script>
+        function mostrarCategoria(nomeCategoria) {
+            const categorias = document.querySelectorAll('.categoria');
+            categorias.forEach(categoria => {
+                if (nomeCategoria === 'todos') {
+                    categoria.style.display = 'block';
+                } else {
+                    categoria.style.display = categoria.id === nomeCategoria ? 'block' : 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
