@@ -19,11 +19,13 @@
             color: white;
             padding: 20px;
             text-align: center;
+            animation: headerFadeIn 1s ease-out;
         }
 
         .logo {
             font-size: 2.5em;
             font-weight: bold;
+            animation: logoPulse 2s infinite alternate;
         }
 
         .container {
@@ -33,14 +35,21 @@
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: containerSlideUp 0.8s ease-out;
         }
 
         h1 {
             text-align: center;
+            animation: fadeIn 1.5s ease-in;
         }
 
         h1 img {
             border-radius: 100px;
+            transition: transform 0.5s ease;
+        }
+
+        h1 img:hover {
+            transform: rotate(360deg);
         }
 
         .product-card {
@@ -52,12 +61,19 @@
             align-items: center;
             gap: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             position: relative;
+            opacity: 0;
+            animation: cardFadeIn 0.5s forwards;
         }
 
+        .product-card:nth-child(1) { animation-delay: 0.2s; }
+        .product-card:nth-child(2) { animation-delay: 0.4s; }
+        .product-card:nth-child(3) { animation-delay: 0.6s; }
+
         .product-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .offer::after {
@@ -70,6 +86,7 @@
             padding: 3px 8px;
             border-radius: 4px;
             font-size: 12px;
+            animation: pulse 1.5s infinite;
         }
 
         .product-card img {
@@ -77,12 +94,23 @@
             height: 130px;
             object-fit: cover;
             border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.1);
         }
 
         .price {
             font-size: 1.5em;
             color: #ff4500;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .product-card:hover .price {
+            color: #ff0000;
+            animation: priceBounce 0.5s;
         }
 
         .product-card a {
@@ -93,10 +121,12 @@
             color: white;
             text-decoration: none;
             border-radius: 4px;
+            transition: all 0.3s ease;
         }
 
         .product-card a:hover {
             background-color: #d199aa;
+            transform: translateX(5px);
         }
 
         footer {
@@ -104,14 +134,17 @@
             padding: 20px;
             background-color: #333;
             color: white;
+            animation: footerFadeIn 1s ease-out;
         }
 
         footer a {
             color: #ffa;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         footer a:hover {
+            color: #ff4500;
             text-decoration: underline;
         }
 
@@ -125,7 +158,95 @@
                 height: auto;
             }
         }
-        
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes headerFadeIn {
+            from { 
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes containerSlideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes cardFadeIn {
+            from { 
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes logoPulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes priceBounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes footerFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(to right, #ff4500, #ff8c00);
+            color: white;
+            font-weight: bold;
+            margin: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        button img {
+            transition: transform 0.3s ease;
+        }
+
+        button:hover img {
+            transform: rotate(15deg);
+        }
     </style>
 </head>
 <body>
@@ -141,80 +262,23 @@
 
     
     <nav style="text-align: center; margin-top: 20px;">
-        <button onclick="mostrarCategoria('Tio Leo-Campinho')" style="
-            padding: 10px 15px;
-            border: none;
-            border-radius: 8px;
-            background: linear-gradient(to right, #ff4500, #ff8c00);
-            color: white;
-            font-weight: bold;
-            margin: 5px;
-            cursor: pointer;
-            ">
-        
+        <button onclick="mostrarCategoria('Tio Leo-Campinho')">
         <img src="https://play-lh.googleusercontent.com/5pdoEZIei6GIHqDR7AW357CXWN3-H43mgal_uKD6MWPluwj67tLXung04eCq3_SU5g" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
         Tio Leo-Campinho
-
         </button>
-        <button onclick="mostrarCategoria('feijao')" style="
-            padding: 10px 15px;
-            border: none;
-            border-radius: 8px;
-            background: linear-gradient(to right, #ff4500, #ff8c00);
-            color: white;
-            font-weight: bold;
-            margin: 5px;
-            cursor: pointer;
-            ">
+        <button onclick="mostrarCategoria('feijao')">
             🥣 Feijão
         </button>
-        <button onclick="mostrarCategoria('limpeza')" style="
-        padding: 10px 15px;
-        border: none;
-        border-radius: 8px;
-        background: linear-gradient(to right, #ff4500, #ff8c00);
-        color: white;
-        font-weight: bold;
-        margin: 5px; 
-        cursor: pointer;  
-        ">
+        <button onclick="mostrarCategoria('limpeza')">
             🧼 Limpeza
         </button>
-        <button onclick="mostrarCategoria('achocolatado')" style="
-        padding: 10px 15px;
-        border: none;
-        border-radius: 8px;
-        background: linear-gradient(to right, #ff4500, #ff8c00);
-        color: white;
-        font-weight: bold;
-        margin: 5px;
-        cursor: pointer;
-        ">
+        <button onclick="mostrarCategoria('achocolatado')">
             🍫 Achocolatado
         </button>
-        <button onclick="mostrarCategoria('molho')" style="
-        padding: 10px 15px;
-        border: none;
-        border-radius: 8px;
-        background: linear-gradient(to right, #ff4500, #ff8c00);
-        color: white;
-        font-weight: bold;
-        margin: 5px;
-        cursor: pointer;
-        ">
+        <button onclick="mostrarCategoria('molho')">
             🍅 Molho
         </button>
-        <button onclick="mostrarCategoria('todos')" style="
-        padding: 10px 15px;
-        border: none;
-        border-radius: 8px;
-        background: linear-gradient(to right, #ff4500, #ff8c00);
-        color: white;
-        font-weight: bold;
-        margin: 5px;
-        cursor: pointer;
-        ">
-
+        <button onclick="mostrarCategoria('todos')">
             👀 Mostrar Todos
         </button>
     </nav>
@@ -280,27 +344,17 @@
                     <a href="#">Comprar Agora</a>
                 </div>
             </div>
-        </div>
-        
-        
-        <div id="limpeza"
-        class="categoria" style
-        ="display: none;">
-           <div class="product-card">
-             
-            <img src="https://i.ibb.co/svsfBrh5/img-1200-1.webp">
-             <div>
-               <h2>Detergente limpol</h2>
-               <p>
-                 Detergente Líquido Jabuticaba Limpol Frasco 500ml
-               </p>
-               <div class="price">R$ 2,69</div>
-               <a href="https://marcussi.superhoje.com/detergente-liquido-jabuticaba-limpol-frasco-500ml/7891022861242/d"
-               target="_blank">
-                 Comprar agora
-               </a>
-               </div>
-           </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/svsfBrh5/img-1200-1.webp">
+                <div>
+                    <h2>Detergente limpol</h2>
+                    <p>Detergente Líquido Jabuticaba Limpol Frasco 500ml</p>
+                    <div class="price">R$ 2,69</div>
+                    <a href="https://marcussi.superhoje.com/detergente-liquido-jabuticaba-limpol-frasco-500ml/7891022861242/d" target="_blank">
+                        Comprar agora
+                    </a>
+                </div>
+            </div>
         </div>       
 
         
@@ -344,11 +398,33 @@
             categorias.forEach(categoria => {
                 if (nomeCategoria === 'todos') {
                     categoria.style.display = 'block';
+                    // Anima os cards quando mostrados
+                    const cards = categoria.querySelectorAll('.product-card');
+                    cards.forEach((card, index) => {
+                        card.style.animation = `cardFadeIn 0.5s forwards ${index * 0.2}s`;
+                    });
                 } else {
-                    categoria.style.display = categoria.id === nomeCategoria ? 'block' : 'none';
+                    if (categoria.id === nomeCategoria) {
+                        categoria.style.display = 'block';
+                        // Anima os cards quando mostrados
+                        const cards = categoria.querySelectorAll('.product-card');
+                        cards.forEach((card, index) => {
+                            card.style.animation = `cardFadeIn 0.5s forwards ${index * 0.2}s`;
+                        });
+                    } else {
+                        categoria.style.display = 'none';
+                    }
                 }
             });
         }
+
+        // Anima os cards iniciais quando a página carrega
+        document.addEventListener('DOMContentLoaded', function() {
+            const initialCards = document.querySelectorAll('#Tio\\ Leo-Campinho .product-card');
+            initialCards.forEach((card, index) => {
+                card.style.animation = `cardFadeIn 0.5s forwards ${index * 0.2}s`;
+            });
+        });
     </script>
 
 </body>
