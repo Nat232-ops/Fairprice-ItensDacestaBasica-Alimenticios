@@ -7,11 +7,12 @@
     <link rel="icon" href="https://i.ibb.co/8VB86p7/nunseidirijiloucalavadaatualizada1938.webp" type="image/webp">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #6a0dad;
+            background: linear-gradient(135deg, #6a0dad 0%, #4b0082 100%);
             color: #333;
+            min-height: 100vh;
         }
 
         header {
@@ -19,61 +20,53 @@
             color: white;
             padding: 20px;
             text-align: center;
-            animation: headerFadeIn 1s ease-out;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .logo {
             font-size: 2.5em;
             font-weight: bold;
-            animation: logoPulse 2s infinite alternate;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .container {
             max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
+            margin: 30px auto;
+            padding: 25px;
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: containerSlideUp 0.8s ease-out;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         h1 {
             text-align: center;
-            animation: fadeIn 1.5s ease-in;
+            color: #4b0082;
         }
 
         h1 img {
             border-radius: 100px;
-            transition: transform 0.5s ease;
-        }
-
-        h1 img:hover {
-            transform: rotate(360deg);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 3px solid white;
         }
 
         .product-card {
-            border: 1px solid #9c0736;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 10px 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
             display: flex;
             align-items: center;
-            gap: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            gap: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             position: relative;
-            opacity: 0;
-            animation: cardFadeIn 0.5s forwards;
+            background-color: #fff;
         }
 
-        .product-card:nth-child(1) { animation-delay: 0.2s; }
-        .product-card:nth-child(2) { animation-delay: 0.4s; }
-        .product-card:nth-child(3) { animation-delay: 0.6s; }
-
         .product-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
 
         .offer::after {
@@ -81,60 +74,50 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            background: #ff0000;
+            background: linear-gradient(to right, #ff4500, #ff8c00);
             color: white;
-            padding: 3px 8px;
-            border-radius: 4px;
+            padding: 5px 10px;
+            border-radius: 20px;
             font-size: 12px;
-            animation: pulse 1.5s infinite;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .product-card img {
             width: 100px;
             height: 130px;
             object-fit: cover;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-
-        .product-card:hover img {
-            transform: scale(1.1);
-        }
-
-        .price {
-            font-size: 1.5em;
-            color: #ff4500;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .product-card:hover .price {
-            color: #ff0000;
-            animation: priceBounce 0.5s;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .product-card a {
             display: inline-block;
             margin-top: 10px;
-            padding: 8px 12px;
-            background-color: #db8b0d;
+            padding: 10px 20px;
+            background: linear-gradient(to right, #ff8c00, #ff4500);
             color: white;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 25px;
+            font-weight: bold;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(255, 140, 0, 0.3);
         }
 
         .product-card a:hover {
-            background-color: #d199aa;
-            transform: translateX(5px);
+            background: linear-gradient(to right, #ff4500, #ff8c00);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(255, 140, 0, 0.4);
         }
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             background-color: #333;
             color: white;
-            animation: footerFadeIn 1s ease-out;
+            border-radius: 20px 20px 0 0;
+            margin-top: 30px;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
         }
 
         footer a {
@@ -144,7 +127,7 @@
         }
 
         footer a:hover {
-            color: #ff4500;
+            color: #ff8c00;
             text-decoration: underline;
         }
 
@@ -158,94 +141,38 @@
                 height: auto;
             }
         }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        
+        nav {
+            text-align: center;
+            margin: 25px auto;
+            max-width: 1200px;
+            padding: 0 20px;
         }
-
-        @keyframes headerFadeIn {
-            from { 
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to { 
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes containerSlideUp {
-            from { 
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to { 
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes cardFadeIn {
-            from { 
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to { 
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes logoPulse {
-            from { transform: scale(1); }
-            to { transform: scale(1.05); }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        @keyframes priceBounce {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        @keyframes footerFadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        button {
-            padding: 10px 15px;
+        
+        nav button {
+            padding: 12px 20px;
             border: none;
-            border-radius: 8px;
+            border-radius: 25px;
             background: linear-gradient(to right, #ff4500, #ff8c00);
             color: white;
             font-weight: bold;
-            margin: 5px;
+            margin: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(255, 140, 0, 0.3);
         }
-
-        button:hover {
+        
+        nav button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+            box-shadow: 0 6px 12px rgba(255, 140, 0, 0.4);
         }
-
-        button:active {
-            transform: translateY(1px);
-        }
-
-        button img {
-            transition: transform 0.3s ease;
-        }
-
-        button:hover img {
-            transform: rotate(15deg);
+        
+        nav button img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 8px;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -257,175 +184,251 @@
 
     <header>
         <div class="logo">Fair Price</div>
-        <p>Comparador de preços dos itens essenciais da cesta básica</p>
+        <p>Comparador de preços dos itens essenciais da cesta básica Baiana</p>
     </header>
 
-    
-    <nav style="text-align: center; margin-top: 20px;">
-        <button onclick="mostrarCategoria('Tio Leo-Campinho')">
-        <img src="https://play-lh.googleusercontent.com/5pdoEZIei6GIHqDR7AW357CXWN3-H43mgal_uKD6MWPluwj67tLXung04eCq3_SU5g" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
-        Tio Leo-Campinho
+    <nav>
+        <button onclick="mostrarCategoria('proteinas')">
+            <img src="https://i.ibb.co/Rkq5gn84/5aaa9b1f650f57a3bb989f7f7693fac6.webp">
+            Proteínas 
         </button>
-        <button onclick="mostrarCategoria('feijao')">
-            🥣 Feijão
+        <button onclick="mostrarCategoria('alimentos')">
+            🥣 Alimentos 
         </button>
         <button onclick="mostrarCategoria('limpeza')">
-            🧼 Limpeza
+            🧼 Produtos de Limpeza
         </button>
-        <button onclick="mostrarCategoria('achocolatado')">
-            🍫 Achocolatado
-        </button>
-        <button onclick="mostrarCategoria('molho')">
-            🍅 Molho
+        <button onclick="mostrarCategoria('higienico')">
+            🪥 Produtos higiênico 
         </button>
         <button onclick="mostrarCategoria('todos')">
             👀 Mostrar Todos
         </button>
+              <button onclick
+      ="mostrarCategoria
+      ('Sal')">
+        <a href="">
+        <em>Comparação detalhada de preços - sal</em></a>
+      </button>
     </nav>
 
     <div class="container">
         <h1>Itens da Cesta Básica</h1>
 
-        
-        <div id="Tio Leo-Campinho" class="categoria">
-            <div class="product-card">
-                <img src="https://i.ibb.co/LDp1T78L/arroz-tio-lino-t-1-5kg-304e3758-1c5e-47dd-82d4-0f4dc735f5ea.jpg"/>
-              <div>
-                 <h2>Arroz Tio Lino</h2>
-                    <p>
-                   Por um preço muito bom</p>
-                    <div class="price">R$ 6,79</div>
-                    <a href=""
-                >Comprar Agora</a>
-                </div>
-             </div>
-                    
-            <div class="product-card">
-                <img src="https://phygital-files.mercafacil.com/copagril/uploads/produto/macarrao_galo_semola_500g_tortiglione_semola_606eddc0-86a9-4a74-8ee2-a98f79e61797.png" alt="Macarrão Galo">
-                <div>
-                    <h2>Macarrão Galo</h2>
-                    <p>Melhor preço do tio leo</p>
-                    <div class="price">R$ 3,99</div>
-                    <a href="#">Comprar Agora</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1008.jpg" alt="Açúcar União">
-                <div>
-                    <h2>Açúcar União-1kg</h2>
-                    <p>O melhor preço do tio leo</p>
-                    <div class="price">R$ 4,99</div>
-                    <a href="#">Comprar Agora</a>
-                </div>
-            </div>
+        <div id="proteinas" class="categoria" style="display: none;">
+            <!-- Conteúdo de proteínas -->
         </div>
 
-        
-        <div id="feijao" class="categoria" style="display: none;">
+        <div id="alimentos" class="categoria">
+            <div class="product-card">
+                <img src="https://i.ibb.co/LDp1T78L/arroz-tio-lino-t-1-5kg-304e3758-1c5e-47dd-82d4-0f4dc735f5ea.jpg" alt="Arroz Tio Lino">
+                <div>
+                    <h2>Arroz Tio Lino</h2>
+                    <p>Por um preço muito bom</p>
+                    <a href="#">Analise os Preços Agora</a>
+                </div>
+            </div>
+            
             <div class="product-card">
                 <img src="https://i.ibb.co/b5vC05F6/Tio-Chico-feij-o-corda-sem-fundo.png" alt="Feijão Tio Chico">
                 <div>
                     <h2>Feijão Tio Chico</h2>
                     <p>Feijão por um ótimo preço aqui no Frossard</p>
-                    <div class="price">R$ 5,70</div>
-                    <a href="#">Comprar Agora</a>
+                    <a href="#">Analise os Preços Agora</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://phygital-files.mercafacil.com/copagril/uploads/produto/macarrao_galo_semola_500g_tortiglione_semola_606eddc0-86a9-4a74-8ee2-a98f79e61797.png" alt="Macarrão Galo">
+                <div>
+                    <h2>Macarrão Galo</h2>
+                    <p>Melhor preço do tio leo</p>
+                    <a href="#">Analise os Preços Agora</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1008.jpg" alt="Açúcar União">
+                <div>
+                    <h2>Açúcar União-1kg</h2>
+                    <p>O melhor preço do tio leo</p>
+                    <a href="#">Analise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/0pdVt0wj/IMG-20250423-WA0055.webp" alt="Sal">
+                <div>
+                    <h2>Sal</h2>
+                    <p>Para dar gosto a sua comida!</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/8DyQG3ZJ/IMG-20250423-WA0056.webp" alt="Café torrado e moído">
+                <div>
+                    <h2>Café torrado e moído</h2>
+                    <p>Para energizar sua Vida!</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/SDr720nY/IMG-20250423-WA0058.webp" alt="Óleo de soja">
+                <div>
+                    <h2>Óleo de soja</h2>
+                    <p>Para fritar sua Comida!</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/CxG1CNN/IMG-20250423-WA0059.webp" alt="Biscoito água e sal">
+                <div>
+                    <h2>Biscoito água e sal</h2>
+                    <p>Para dar uma adocificada na sua vida!</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/d0khRLLw/IMG-20250423-WA0060.webp" alt="Leite em pó integral">
+                <div>
+                    <h2>Leite em pó integral</h2>
+                    <p>O leite em pó é leite desidratado, prático e durável.</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/gZMzQkch/IMG-20250423-WA0061.webp" alt="Farinha de trigo sem fermento">
+                <div>
+                    <h2>Farinha de trigo sem fermento</h2>
+                    <p>Farinha de trigo sem fermento, para receitas sem crescimento.</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/mCb7wt64/IMG-20250423-WA0062.webp" alt="Molho de tomate">
+                <div>
+                    <h2>Molho de tomate</h2>
+                    <p>Molho de tomate, condimento delicioso para massas e pizzas.</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/PvY7t1F2/IMG-20250423-WA0063.webp" alt="Farinha de mandioca">
+                <div>
+                    <h2>Farinha de mandioca</h2>
+                    <p>Farinha de mandioca, ingrediente tradicional brasileiro.</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/VWtZ2XHS/IMG-20250423-WA0064.webp" alt="Feijão preto">
+                <div>
+                    <h2>Feijão preto</h2>
+                    <p>Feijão preto, alimento básico e nutritivo.</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/MkkSgsFw/8029d429788c4d5bbfc7b2419ea34aaf.webp" alt="Margarina">
+                <div>
+                    <h2>Margarina</h2>
+                    <p>Margarina, substituto da manteiga feito de óleos vegetais.</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/qFJSjwCy/IMG-20250423-WA0065.webp" alt="Biscoito de maizena">
+                <div>
+                    <h2>Biscoito de maizena</h2>
+                    <p>Biscoito de maizena, clássico e delicioso.</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/v4tBq3KP/IMG-20250423-WA0066.webp" alt="Biscoito de coco">
+                <div>
+                    <h2>Biscoito de coco</h2>
+                    <p>Biscoito de coco, delicioso e tropical.</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/7hy0GHT/IMG-20250423-WA0067.webp" alt="Leite integral">
+                <div>
+                    <h2>Leite integral</h2>
+                    <p>Leite integral, nutritivo e cremoso.</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/1JpT8T2g/IMG-20250423-WA0068.webp" alt="Biscoito Maria">
+                <div>
+                    <h2>Biscoito Maria</h2>
+                    <p>Biscoito Maria, clássico e simples.</p>
+                    <a href="#">Análise os Preços Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/3YQq3KtV/IMG-20250423-WA0057.webp" alt="Flocos de milho">
+                <div>
+                    <h2>Flocos de milho</h2>
+                    <p>Flocos de milho, prático e delicioso.</p>
+                    <a href="#">Análise os Preços Agora</a>
                 </div>
             </div>
         </div>
 
-        
         <div id="limpeza" class="categoria" style="display: none;">
             <div class="product-card">
                 <img src="https://i.ibb.co/S4CTpkZh/dc9f7bec2bfada7d736a7ba8cac94a09-1.jpg" alt="Detergente Aqua">
                 <div>
                     <h2>Detergente Aqua</h2>
                     <p>Remove gorduras e sujeiras com alto poder de limpeza</p>
-                    <div class="price">R$ 4,99</div>
-                    <a href="#">Comprar Agora</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://i.ibb.co/svsfBrh5/img-1200-1.webp">
-                <div>
-                    <h2>Detergente limpol</h2>
-                    <p>Detergente Líquido Jabuticaba Limpol Frasco 500ml</p>
-                    <div class="price">R$ 2,69</div>
-                    <a href="https://marcussi.superhoje.com/detergente-liquido-jabuticaba-limpol-frasco-500ml/7891022861242/d" target="_blank">
-                        Comprar agora
-                    </a>
-                </div>
-            </div>
-        </div>       
-
-        
-        <div id="achocolatado" class="categoria" style="display: none;">
-            <div class="product-card">
-                <img src="https://i.ibb.co/qF4zfRQ7/156728-1200-auto.webp" alt="Achocolatado Nescau">
-                <div>
-                    <h2>ACHOCOLATADO EM PO NESCAU 370G LATA NESTLE</h2>
-                    <p>Fonte de vitaminas e sabor inconfundível</p>
-                    <div class="price">R$ 8,79</div>
-                    <a href="https://www.docesvaz.com.br/achocolatado-em-po-nescau-370g-lata-nestle--772102/p" target="_blank">Comprar Agora</a>
+                    <a href="#">Analise os Preços Agora</a>
                 </div>
             </div>
         </div>
 
-        
-        <div id="molho" class="categoria" style="display: none;">
-            <div class="product-card">
-                <img src="https://i.ibb.co/vxd2RFgm/234985-1200-675.webp" alt="Molho de Tomate">
-                <div>
-                    <h2>Molho De Tomate 300g</h2>
-                    <p>Molho De Tomate Olé Tradicional Sachê 300g, Compre já!</p>
-                    <div class="price">R$ 1,45</div>
-                    <a href="https://delivery.atacadotreichel.com.br/123198-molho-de-tomate-ole-tradicional-sache-300g/p" target="_blank">Comprar Agora</a>
-                </div>
-            </div>
+        <div id="higienico" class="categoria" style="display: none;">
+            <!-- Adicione produtos de higiene aqui -->
         </div>
-     </div>
-    
+    </div>
 
     <footer>
         <p>© 2025 Fair Price. Todos os direitos reservados.</p>
-        <p>Última atualização: 23/04/2025</p>
+        <p>Última atualização: 25/06/2025</p>
         <p><a href="#">Voltar ao Topo</a> | <a href="#">Sobre nós</a> | <a href="#">Contato</a></p>
     </footer>
 
-    
     <script>
         function mostrarCategoria(nomeCategoria) {
             const categorias = document.querySelectorAll('.categoria');
             categorias.forEach(categoria => {
                 if (nomeCategoria === 'todos') {
                     categoria.style.display = 'block';
-                    // Anima os cards quando mostrados
-                    const cards = categoria.querySelectorAll('.product-card');
-                    cards.forEach((card, index) => {
-                        card.style.animation = `cardFadeIn 0.5s forwards ${index * 0.2}s`;
-                    });
                 } else {
-                    if (categoria.id === nomeCategoria) {
-                        categoria.style.display = 'block';
-                        // Anima os cards quando mostrados
-                        const cards = categoria.querySelectorAll('.product-card');
-                        cards.forEach((card, index) => {
-                            card.style.animation = `cardFadeIn 0.5s forwards ${index * 0.2}s`;
-                        });
-                    } else {
-                        categoria.style.display = 'none';
-                    }
+                    categoria.style.display = categoria.id === nomeCategoria ? 'block' : 'none';
                 }
             });
         }
-
-        // Anima os cards iniciais quando a página carrega
-        document.addEventListener('DOMContentLoaded', function() {
-            const initialCards = document.querySelectorAll('#Tio\\ Leo-Campinho .product-card');
-            initialCards.forEach((card, index) => {
-                card.style.animation = `cardFadeIn 0.5s forwards ${index * 0.2}s`;
-            });
-        });
+        
+        window.onload = function() {
+            mostrarCategoria('alimentos');
+        };
     </script>
-
 </body>
 </html>
